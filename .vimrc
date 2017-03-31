@@ -1,19 +1,18 @@
 ﻿"Plugin
 "プラグインを読込む場合はここに記述
 if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
+  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-
-" Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " ファイルをtree表示してくれる
 NeoBundle 'scrooloose/nerdtree'
 " Ctrl+eでツリー表示する
-nnoremap <silent><C-e> :NERDTree<CR>
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " Gitを便利に使う
 NeoBundle 'tpope/vim-fugitive'
 " インデントに色を付けて見やすくする
@@ -66,3 +65,8 @@ set expandtab			"タブ入力を複数の空白入力に置き換える
 set tabstop=2			"画面上でタブ文字が占める幅
 set shiftwidth=2	"自動インデントでずれる幅
 set autoindent		"改行時に前の行のインデントを継続する
+
+"自動的に閉じ括弧を入力
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
