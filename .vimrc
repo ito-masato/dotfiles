@@ -1,5 +1,5 @@
-"Plugin
-"ƒvƒ‰ƒOƒCƒ“‚ğ“Ç‚Şê‡‚Í‚±‚±‚É‹Lq
+ï»¿"Plugin
+"ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’èª­è¾¼ã‚€å ´åˆã¯ã“ã“ã«è¨˜è¿°
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
@@ -10,33 +10,33 @@ endif
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-" ƒtƒ@ƒCƒ‹‚ğtree•\¦‚µ‚Ä‚­‚ê‚é
+" ãƒ•ã‚¡ã‚¤ãƒ«ã‚’treeè¡¨ç¤ºã—ã¦ãã‚Œã‚‹
 NeoBundle 'scrooloose/nerdtree'
-" Ctrl+e‚ÅƒcƒŠ[•\¦‚·‚é
+" Ctrl+eã§ãƒ„ãƒªãƒ¼è¡¨ç¤ºã™ã‚‹
 nnoremap <silent><C-e> :NERDTree<CR>
-" Git‚ğ•Ö—˜‚Ég‚¤
+" Gitã‚’ä¾¿åˆ©ã«ä½¿ã†
 NeoBundle 'tpope/vim-fugitive'
-" ƒCƒ“ƒfƒ“ƒg‚ÉF‚ğ•t‚¯‚ÄŒ©‚â‚·‚­‚·‚é
+" ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã«è‰²ã‚’ä»˜ã‘ã¦è¦‹ã‚„ã™ãã™ã‚‹
 NeoBundle 'nathanaelkane/vim-indent-guides'
-" RailsŒü‚¯‚ÌƒRƒ}ƒ“ƒh‚ğ’ñ‹Ÿ‚·‚é
+" Railså‘ã‘ã®ã‚³ãƒãƒ³ãƒ‰ã‚’æä¾›ã™ã‚‹
 NeoBundle 'tpope/vim-rails'
-" RubyŒü‚¯‚Éend‚ğ©“®‘}“ü‚µ‚Ä‚­‚ê‚é
+" Rubyå‘ã‘ã«endã‚’è‡ªå‹•æŒ¿å…¥ã—ã¦ãã‚Œã‚‹
 NeoBundle 'tpope/vim-endwise'
 
 "Backup
-set noundofile		"undoƒtƒ@ƒCƒ‹‚ğ¶¬‚µ‚È‚¢
-set nobackup			"backupƒtƒ@ƒCƒ‹‚ğ¶¬‚µ‚È‚¢
-set noswapfile		"swapƒtƒ@ƒCƒ‹‚ğ¶¬‚µ‚È‚¢
+set noundofile		"undoãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã—ãªã„
+set nobackup			"backupãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã—ãªã„
+set noswapfile		"swapãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã—ãªã„
 
 "Visual
-set number      	"s”Ô†‚ğ•\¦
-set cursorline  	"Œ»İs‚ğ‹­’²•\¦
-set cursorcolumn  "Œ»İ—ñ‚ğ‹­’²•\¦
-set paste         "ƒy[ƒXƒg‚ÌƒI[ƒgƒCƒ“ƒfƒ“ƒg‚ğ–³Œø‚É‚·‚é
-syntax on					"\•¶–ˆ‚ÉF•ª‚¯‚ğ‚·‚é
+set number      	"è¡Œç•ªå·ã‚’è¡¨ç¤º
+set cursorline  	"ç¾åœ¨è¡Œã‚’å¼·èª¿è¡¨ç¤º
+set cursorcolumn  "ç¾åœ¨åˆ—ã‚’å¼·èª¿è¡¨ç¤º
+set paste         "ãƒšãƒ¼ã‚¹ãƒˆæ™‚ã®ã‚ªãƒ¼ãƒˆã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’ç„¡åŠ¹ã«ã™ã‚‹
+syntax on					"æ§‹æ–‡æ¯ã«è‰²åˆ†ã‘ã‚’ã™ã‚‹
 
 """"""""""""""""""""""""""""""
-" ‘SŠpƒXƒy[ƒX‚Ì•\¦
+" å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹ã®è¡¨ç¤º
 " http://inari.hatenablog.com/entry/2014/05/05/231307
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
@@ -46,23 +46,23 @@ if has('syntax')
     augroup ZenkakuSpace
         autocmd!
         autocmd ColorScheme * call ZenkakuSpace()
-        autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '@')
+        autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', 'ã€€')
     augroup END
     call ZenkakuSpace()
 endif
 """"""""""""""""""""""""""""""
 
 "Search
-set incsearch   "ƒCƒ“ƒNƒŠƒƒ“ƒ^ƒ‹ƒT[ƒ`‚ğs‚¤
-set hlsearch    "ŒŸõŒ‹‰Ê‚ğƒnƒCƒ‰ƒCƒg‚·‚é
-set ignorecase  "ŒŸõ‚É‘å•¶š¬•¶š‚ğ‹æ•Ê‚µ‚È‚¢
-set smartcase   "ŒŸõƒ[ƒh‚É‘å•¶š‚ğŠÜ‚ñ‚Å‚¢‚½‚ç‘å¬‚ğ‹æ•Ê‚·‚é
-set wrapscan    "ƒtƒ@ƒCƒ‹‚Ìæ“ª‚Öƒ‹[ƒv‚·‚é
-set whichwrap=b,s,h,l,<,>,[,] "ƒJ[ƒ\ƒ‹‚ğs“ªAs––‚Å~‚Ü‚ç‚È‚¢‚æ‚¤‚É‚·‚é
-set clipboard=unnamed "ƒNƒŠƒbƒvƒ{[ƒh‚ğ—˜—p‚·‚é
+set incsearch   "ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ã‚¿ãƒ«ã‚µãƒ¼ãƒã‚’è¡Œã†
+set hlsearch    "æ¤œç´¢çµæœã‚’ãƒã‚¤ãƒ©ã‚¤ãƒˆã™ã‚‹
+set ignorecase  "æ¤œç´¢æ™‚ã«å¤§æ–‡å­—å°æ–‡å­—ã‚’åŒºåˆ¥ã—ãªã„
+set smartcase   "æ¤œç´¢ãƒ¯ãƒ¼ãƒ‰ã«å¤§æ–‡å­—ã‚’å«ã‚“ã§ã„ãŸã‚‰å¤§å°ã‚’åŒºåˆ¥ã™ã‚‹
+set wrapscan    "ãƒ•ã‚¡ã‚¤ãƒ«ã®å…ˆé ­ã¸ãƒ«ãƒ¼ãƒ—ã™ã‚‹
+set whichwrap=b,s,h,l,<,>,[,] "ã‚«ãƒ¼ã‚½ãƒ«ã‚’è¡Œé ­ã€è¡Œæœ«ã§æ­¢ã¾ã‚‰ãªã„ã‚ˆã†ã«ã™ã‚‹
+set clipboard=unnamed "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‚’åˆ©ç”¨ã™ã‚‹
 
 "Input
-set expandtab			"ƒ^ƒu“ü—Í‚ğ•¡”‚Ì‹ó”’“ü—Í‚É’u‚«Š·‚¦‚é
-set tabstop=2			"‰æ–Êã‚Åƒ^ƒu•¶š‚ªè‚ß‚é•
-set shiftwidth=2	"©“®ƒCƒ“ƒfƒ“ƒg‚Å‚¸‚ê‚é•
-set autoindent		"‰üs‚É‘O‚Ìs‚ÌƒCƒ“ƒfƒ“ƒg‚ğŒp‘±‚·‚é
+set expandtab			"ã‚¿ãƒ–å…¥åŠ›ã‚’è¤‡æ•°ã®ç©ºç™½å…¥åŠ›ã«ç½®ãæ›ãˆã‚‹
+set tabstop=2			"ç”»é¢ä¸Šã§ã‚¿ãƒ–æ–‡å­—ãŒå ã‚ã‚‹å¹…
+set shiftwidth=2	"è‡ªå‹•ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã§ãšã‚Œã‚‹å¹…
+set autoindent		"æ”¹è¡Œæ™‚ã«å‰ã®è¡Œã®ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’ç¶™ç¶šã™ã‚‹
