@@ -8,6 +8,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplcache'
 
 " ファイルをtree表示してくれる
 NeoBundle 'scrooloose/nerdtree'
@@ -21,6 +22,14 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-rails'
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
+
+if has('mac')
+  let g:vimproc_dll_path = $VIMRUNTIME . '/autoload/vimproc_mac.so'
+elseif has('win32')
+  let g:vimproc_dll_path = $HOME . '.vim/bundle/vimproc/autoload/vimproc_win32.dll'
+elseif has('win64')
+  let g:vimproc_dll_path = $HOME . '.vim/bundle/vimproc/autoload/vimproc_win64.dll'
+endif
 
 "Backup
 set noundofile		"undoファイルを生成しない
